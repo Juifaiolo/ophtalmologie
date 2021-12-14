@@ -16,7 +16,7 @@ import org.apache.poi.xssf.usermodel.XSSFWorkbook;
 
 public class Csv 
 {
-	public static List<List<String>> getListFromExcel(String fileName)
+	public static List<List<String>> getListFromExcel(String _fileName)
 	{
 		
 		List<List<String>> array = new ArrayList<List<String>>();
@@ -24,7 +24,7 @@ public class Csv
 		String value = "";
         try
         {
-            FileInputStream file = new FileInputStream(new File(fileName));
+            FileInputStream file = new FileInputStream(new File(_fileName));
  
             //Create Workbook instance holding reference to .xlsx file
             XSSFWorkbook workbook = new XSSFWorkbook(file);

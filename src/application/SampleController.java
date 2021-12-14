@@ -16,11 +16,13 @@ import javafx.stage.FileChooser;
 public class SampleController implements Initializable
 {
 	private List<List<String>> array ;
-	public List<List<String>> getArray() {
+	public List<List<String>> getArray() 
+	{
 		return array;
 	}
 
-	public void setArray(List<List<String>> array) {
+	public void setArray(List<List<String>> array) 
+	{
 		this.array = array;
 	}
 	private List<Integer> indexes = new ArrayList<Integer>();
@@ -106,6 +108,7 @@ public class SampleController implements Initializable
 		{
 			FileChooser fc = new FileChooser();
 			fc.setTitle("Veuillez sélectionner un fichier .xlxs.");
+			//fc.setInitialDirectory(System.getProperty(null));
 			File file = fc.showOpenDialog(null);
 			
 			if(file != null)
