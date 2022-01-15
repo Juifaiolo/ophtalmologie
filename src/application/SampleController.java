@@ -3,6 +3,8 @@ package application;
 import java.io.File;
 import java.net.URL;
 import java.util.ArrayList;
+import java.util.Calendar;
+import java.util.Date;
 import java.util.List;
 import java.util.ResourceBundle;
 
@@ -10,7 +12,11 @@ import org.apache.commons.compress.utils.FileNameUtils;
 
 import javafx.fxml.FXML;
 import javafx.fxml.Initializable;
-import javafx.scene.control.*;
+import javafx.scene.control.Alert;
+import javafx.scene.control.Button;
+import javafx.scene.control.Label;
+import javafx.scene.control.ListView;
+import javafx.scene.control.TextField;
 import javafx.stage.FileChooser;
 
 public class SampleController implements Initializable
@@ -63,6 +69,13 @@ public class SampleController implements Initializable
 	{
 		// TODO Auto-generated method stub
 		buttonOk.setDisable(true);
+		DatabaseTest dbt = new DatabaseTest();
+		Calendar myCal = Calendar.getInstance();
+		myCal.set(Calendar.YEAR, 1998);
+		myCal.set(Calendar.MONTH, 6);
+		myCal.set(Calendar.DAY_OF_MONTH, 1);
+		Date ddn = myCal.getTime();
+		dbt.insertPatient("Chariot", "Romain", ddn, 'H',"0474600315","vizanfnof", 1);
 	}
 	
 	public void recherche()

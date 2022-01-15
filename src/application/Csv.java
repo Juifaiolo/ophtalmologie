@@ -79,9 +79,7 @@ public class Csv
                         	
                         default:
                         	break;
-                    }
-
-                    
+                    }      
                     values.add(value); 
                 }
                 array.add(List.copyOf(values));
